@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React from 'react';
 
 
 
@@ -77,7 +77,57 @@ function Home() {
                  
 
             </section>
+            <section className="section-meals">
+                <ul>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/braids1.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/braids2.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/shorthair2.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/shorthair3.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                </ul>
+                <ul className="meals-showcase clearfix">
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/shorthair4.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/shorthair5.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/ponytail1.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="meal-photo">
+                            <img src="css/img/twists1.jpg" alt="crownrolls"/>
+                        </figure>
+                    </li>
+
+                </ul>
+
+            </section>
         </div>
         
     )
 }
+
+export default Home;

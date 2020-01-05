@@ -1,0 +1,473 @@
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* ------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'lato', 'Arial' , sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/* This another way to clear floats */
+.clearfix { zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* ---------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------- */
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+section {
+ padding: 80px 0; /* This will create white space between the section and header  */
+}
+.box {
+    padding: 1%;
+}
+
+/* -----------------HEADINGS--------------- */
+
+ h1, 
+ h2,
+ h3 { /* when using a big font size always decrese the font weight */
+     font-weight: 300;
+     text-transform: uppercase;
+     letter-spacing: 1px; /* this will give space betweenthe letters */
+
+ }
+ h1 {
+     margin-top: 0; /* this will give space between the buttons */
+     margin-bottom: 20px; /* this will give space between the buttons */
+     color: #fff;
+     font-size: 240%;
+     word-spacing: 4px; /* this will give space between the words */
+ }
+ h2{
+    font-size: 180%;
+    word-spacing: 2px; /* this will give space between the words */
+    text-align: center; /* This will center the heading in the middle of the page  */
+    margin-bottom: 30px;
+ }
+ h3 {
+   font-size: 110%;
+   margin-bottom: 15px;  
+ }
+  h2:after{
+      display: block;
+      height: 2px;
+      background-color: #e67e22;
+      content: " "; /* This puts the line underneath the h2 heading in the section element */
+      width: 100px;
+      margin: 0 auto; /* This is for margin for left and right  and center it so that it align with the heading*/
+        margin-bottom: 30px; /* This is for margin for the paragraph and the paragraph */
+       margin-top: 30px; /* This for the margin from the top of the line */
+
+  }
+
+  /* --------Paragraphs---------- */
+
+  .long-copy {
+      line-height: 145%; /*  line hieght should be between 120%-145% */
+       width: 70%; /* This will no longer be center , so I must add margins */
+       margin-left: 15%; /* Since the width is 100% i had use the remainder 30% on the margins */
+
+  }
+  .box p {
+      font-size: 90%;
+      line-height: 145%;
+  }
+
+  /* ---------------------------- */
+  /* -----------ICONS---------------- */
+  .first-icon{
+      font-size: 350%;
+      display: block;
+      color: #e67e22;
+      margin-bottom: 10px;
+      margin-right: 20px;
+  }
+  .icon-small{
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      color: #e67e22;
+      font-size: 120%;
+      /* to make the icons line up with the text */
+      line-height: 120%;
+      vertical-align: middle;
+      margin-top: -4px;
+  }
+/* ------------------------------------------------------- */
+/* -----------LINKS---------------------------------------- */
+
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    /* this how to create a underline under the link */
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    /* this allows the underline to disppear */
+    transition: border-bottom 0.2s, color 0.2s;
+
+}
+a:hover,
+a:active {
+    /* this is code that once link is hovered the underline disappears */
+    color: #555;
+    border-bottom: 1px solid transparent
+}
+
+  /* ---------------------------------------- */
+ /* ---------------BUTTONS--------------------- */
+ 
+ .btn:link, /* when ever a user vists the link it will stay the same */
+ .btn:visited,
+ input[type=submit] {
+     display: inline-block;
+     padding: 10px 30px; /* top-bottom, left-right */
+     font-weight: 300;
+     text-decoration: none; /* this gets rid of the underline */
+     border-radius: 200px;
+     transition: background-color 0.2s, border 0.2s, color 0.2s;
+     color: #fff;
+     border: 1px solid #e67e22;
+ }
+
+ .btn-full:link,
+ .btn-ful:visited,
+ input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+ }
+ .btn-ghost:link,
+ .btn-ghost:visited {
+     border: 1px solid #e67e22;
+     color: #e67e22;
+ }
+ .btn:hover, /* hover : mouse over a button, active: when we click a button */
+ .btn:active,
+ input[type=submit]:hover,
+ input[type=submit]:active  {
+    background-color: #cf6d17;
+    color: #fff;
+ }
+ .btn-full:hover,
+ .btn-ful:active,
+ input[type=submit]  {
+    border: 1px solid #e67e22;
+    color: #fff;
+ }
+ .btn-ghost:hover,
+ .btn-ghost:active {
+     border: 1px solid #e67e22;
+     color: #fff;
+ }
+
+ /* -------------------------------------------- */
+ /* HEADER */
+ /* ---------------------------------------------- */
+ header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(./hairstylist.jpg); /* we are making the image darker so we can see the text , the liner-gradient is like adding two background images  added a black color on top of the image*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-txt-box {
+    position: absolute; /* this will vertically and horizatally center it */
+    width: 1140px; /* assign the width of the row */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* this applies a 2D or 3D transformation to the element , rotate, scale or move , skew in this case width and height up to the left */
+}
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+ .main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+
+}
+.main-nav li a:link, /* This is where I decorat my nav buttons  */
+.main-nav li a:visited {
+     padding: 8px 0; /* this created space between the orange line and the links  */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+   border-bottom: 2px solid transparent;  /* transparent attribute only shows the underline once clicked   */
+   transition:border-bottom 0.2s;
+}
+.main-nav li a:hover, /* This is where I decorat my nav buttons  */
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+/* --------------------------------------- */
+/* FEATURES */
+/* --------------------------------------- */
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/* ---------Meals---------------- */
+/* ------------------------------ */
+
+.section-meals {
+    padding: 0;
+}
+
+ .meals-showcase { /* this is for both the rows */
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li { /* This for the unordered list element. This is how they are on the same row */
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo { /* Since the normalized CSS files would overide the basic setup style , I had to specify the magrgin */
+    width: 100%;
+    margin: 0;
+    overflow:hidden;/* the imagaes are bigger than the browswer to I used overflow to fit them with the actual website */
+    background-color: black; /* this is with the opacity to create the background color  */
+}
+.meal-photo img { /* this is for the actual images */
+     opacity: 0.7; /* this adds a background colo to the imgaes  */
+    width: 100%; /* this keeps things consistant with the parent container it is in  */
+    height: auto;
+    transform: scale(1.15);  /*this makes the images bigger and fill in the spaces between them */
+     transition: transform 0.5s opacity 0.5s /* this will create a transition effect on the images, I add the opacity to animate the images  */
+}
+.meal-photo img:hover {
+opacity:1;
+transform: scale(1.03); /* When the imgages are clicked they reduce in size and then return to there actual size */
+}
+
+/* ---------------------------------------------- */
+/* HOW IT WORKS */
+/* ---------------------------------------------- */
+.section-steps {
+    background-color: rgb(238, 236, 236);
+}
+
+  .steps-box:first-child { /* This is how you select the boxes individuall, in this case the left box */
+    text-align: right; /* works with all inline blocks not only just text  */
+     padding-right: 3%; /* use percentages for responsive web design , were we want out layout to be fluid */
+     margin-top: 60px;
+  }  
+.steps-box:last-child {
+     padding-left: 3%; 
+     margin-top: 70px;
+}
+.app-screen{
+    width: 40%;
+}
+.works-steps {
+    margin-bottom: 50px;
+}
+
+/* I want to create a margin between the apple button and the google button but from the last step of the list */
+.works-steps:last-of-type {
+    margin-bottom: 120px;
+}
+
+
+.works-steps div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* This will ensure the element does not force a line break  and stay side by side with the text  */
+     border-radius: 50%;   /*  This creates the cirle   */
+    height: 55px; /*  this creates how tall the circle will be   */
+    width: 55px; /*  this determines how wide the cricle will be  */
+    text-align: center;
+    padding: 5px;
+    float: left ; /* this made the numbers shift to the left so that the text appears on the right of the numbers  */
+    font-size: 150%;
+     margin-right: 25px; /* this creates margin between the numbers and the the text */
+}
+
+/* This is where i will style the buttons for apple and google  */
+
+.btn-app:link,
+.btn-app:visited{
+    /* this got rid of the orange underline  */
+    border: 0;
+}
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* ------------------CITY SECTION------------------------- */
+
+/* -------IMAGES------ */
+
+.box img {
+    /* i want the imgages the same with as the box */
+    width: 100%;
+    height: auto;
+    /* this is adding margin to the <h3> */
+    margin-bottom: 15px;
+}
+.city-feature {
+    margin-bottom: 5px;
+}
+
+
+/* --------------------------------------------------------- */
+/* Testimonials */
+/* -------------------------------------------------------- */
+
+.section-testimonials {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),url('./atlanta.jpg');
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed; /* the image will always stay in the same place  */
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145% ;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute; /* when using position absolute , must assure parent has relative */
+    top: -5px;
+    left: -5px;
+}
+
+
+cite {  /* this will make the block separate from the text  */
+
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* --------------------------------------------------------- */
+/* Signup */
+/* -------------------------------------------------------- */
+
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+ .plan-box div:last-child{  /* This is how i centered the sign up buttons*/
+    text-align: center;
+    border: 0;
+}
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22 ;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-box ul{
+  list-style: none;  
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+
+
+/* -------------------- form --------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;   /* this will center this form inside of its parent element */
+}
+
+input[type=text],
+select[type=email],
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+
+}
+
+*:focus {outline: none;}
